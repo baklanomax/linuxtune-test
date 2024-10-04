@@ -6,10 +6,6 @@ then
 	exit 1
 fi
 
-until [[ $inputrc == "y" || $inputrc == "n" ]]
-do
-	read -ep "Скопировать файл inputrc? [y/n] " inputrc
-done
 until [[ $swap == "y" || $swap == "n" ]]
 do
 	read -ep "Исправить ссылки на раздел подкачки? [y/n] " swap
