@@ -41,11 +41,10 @@ then
 	update-initramfs -uk all
 fi
 
-if [[ $mail == "y" || $tune == "y" || $kbd == "y" || $kernel == "y" ]]
+if [[ $tune == "y" || $kbd == "y" || $kernel == "y" ]]
 then
 	apt update
 	apt -y upgrade
-	[[ $mail == "y" ]] && apt -y install mutt
 	[[ $tune == "y" ]] && apt -y install dbus-x11 gpm mc tmux
 	[[ $kbd == "y" || $kernel == "y" ]] && apt -y install bison flex make
 	[[ $kbd == "y" ]] && apt -y install autopoint gettext libpam0g-dev libtool
