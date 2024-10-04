@@ -72,7 +72,7 @@ then
 	sudo -u $user dbus-launch gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 110
 	sudo -u $user dbus-launch gsettings set org.gnome.desktop.session idle-delay 0
 
-	chmod u+s /usr/local/bin/kbdrate
+	chmod u+s /usr/sbin/kbdrate
 	update-grub
 fi
 
