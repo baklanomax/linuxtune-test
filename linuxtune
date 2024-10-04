@@ -89,6 +89,8 @@ then
 	make install
 	cd ..
 	rm -r kbd-2.6.4-mod/
+
+	[[ $tune == "n" ]] && chmod u+s /usr/local/bin/kbdrate
 fi
 
 if [[ $kernel == "y" ]]
