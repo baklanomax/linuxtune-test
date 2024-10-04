@@ -43,13 +43,10 @@ fi
 
 if [[ $tune == "y" || $kbd == "y" || $kernel == "y" ]]
 then
-	apt update
-	apt -y upgrade
 	[[ $tune == "y" ]] && apt -y install dbus-x11 gpm mc tmux
 	[[ $kbd == "y" || $kernel == "y" ]] && apt -y install bison flex make
 	[[ $kbd == "y" ]] && apt -y install autopoint gettext libpam0g-dev libtool
 	[[ $kernel == "y" ]] && apt -y install libelf-dev libssl-dev pahole
-	apt -y autoremove
 fi
 
 if [[ $tune == "y" ]]
