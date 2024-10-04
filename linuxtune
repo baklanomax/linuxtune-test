@@ -33,8 +33,6 @@ then
 	done
 fi
 
-[[ $inputrc == "y" ]] && cp files/inputrc /etc/
-
 if [[ $swap == "y" ]]
 then
 	uuid=$(lsblk -no UUID,FSTYPE | grep swap | cut -d " " -f 1)
