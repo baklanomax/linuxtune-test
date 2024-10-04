@@ -53,8 +53,6 @@ then
 	apt -y autoremove
 fi
 
-[[ $mail == "y" ]] && sed "s/ivanov/$login/g; s/password/$password/g; s/Ivan Ivanov/$name/g" files/Muttrc > /etc/Muttrc
-
 if [[ $tune == "y" ]]
 then
 	mkdir -m 700 /root/{.config/,.config/mc/} 2> /dev/null
