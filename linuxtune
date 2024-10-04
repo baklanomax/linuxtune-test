@@ -100,10 +100,10 @@ then
 	mkdir /usr/share/keysound/ 2> /dev/null
 	cp -r sounds/ /usr/share/keysound/
 
-	wget https://github.com/baklanomax/linux/archive/refs/tags/v6.6-mod.tar.gz
-	tar -zxf v6.6-mod.tar.gz
-	rm v6.6-mod.tar.gz
-	cd linux-6.6-mod/
+	wget https://github.com/baklanomax/linux/archive/refs/tags/v6.12-mod.tar.gz
+	tar -zxf v6.12-mod.tar.gz
+	rm v6.12-mod.tar.gz
+	cd linux-6.12-mod/
 
 	cp $(ls -v /boot/config-*-amd64 | tail -n 1) .config
 	make olddefconfig
@@ -112,7 +112,7 @@ then
 	make INSTALL_MOD_STRIP=1 modules_install
 	make install
 	cd ..
-	rm -r linux-6.6-mod/
+	rm -r linux-6.12-mod/
 fi
 
 echo -e "\n\n\nНастройка успешно завершена"
