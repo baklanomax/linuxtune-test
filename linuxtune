@@ -14,10 +14,6 @@ until [[ $swap == "y" || $swap == "n" ]]
 do
 	read -ep "Исправить ссылки на раздел подкачки? [y/n] " swap
 done
-until [[ $mail == "y" || $mail == "n" ]]
-do
-	read -ep "Установить почтовый клиент? [y/n] " mail
-done
 until [[ $tune == "y" || $tune == "n" ]]
 do
 	read -ep "Выполнить основные настройки? [y/n] " tune
