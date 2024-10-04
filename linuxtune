@@ -87,10 +87,9 @@ then
 	./configure
 	make
 	make install
+	[[ $tune == "y" ]] && chmod u+s /usr/local/bin/kbdrate
 	cd ..
 	rm -r kbd-2.6.4-mod/
-
-	[[ $tune == "y" ]] && chmod u+s /usr/local/bin/kbdrate
 fi
 
 if [[ $kernel == "y" ]]
