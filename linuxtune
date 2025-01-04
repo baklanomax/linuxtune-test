@@ -75,10 +75,10 @@ fi
 
 if [[ $kbd == "y" ]]
 then
-	wget https://github.com/baklanomax/kbd/archive/refs/tags/v2.6.4-mod.tar.gz
-	tar -zxf v2.6.4-mod.tar.gz
-	rm v2.6.4-mod.tar.gz
-	cd kbd-2.6.4-mod/
+	wget https://github.com/baklanomax/kbd/archive/refs/tags/v2.7.1-mod.tar.gz
+	tar -zxf v2.7.1-mod.tar.gz
+	rm v2.7.1-mod.tar.gz
+	cd kbd-2.7.1-mod/
 
 	./autogen.sh
 	./configure
@@ -86,7 +86,7 @@ then
 	make install
 	[[ $tune == "y" ]] && chmod u+s /usr/local/bin/kbdrate
 	cd ..
-	rm -r kbd-2.6.4-mod/
+	rm -r kbd-2.7.1-mod/
 fi
 
 if [[ $kernel == "y" ]]
